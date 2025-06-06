@@ -1,0 +1,20 @@
+package day04;
+
+public class LogestStringFind {
+
+	public static void main(String[] args) {
+		String[] strs = {"tlower","tlow","tloght","tloght","tl"};
+		
+		String logestString = strs[0];
+		
+		//find the logest string in the string array
+		for(int i=1; i<strs.length; i++) {
+			if(strs[i].length() > logestString.length()) {
+				logestString = strs[i];
+			}
+		}
+		
+		System.out.println("LogestStringFind.main() "+logestString);
+	}
+
+}

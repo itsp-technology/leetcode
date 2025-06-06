@@ -1,0 +1,30 @@
+package day06;
+
+public class FindIndexFistOccurenceInString {
+
+	public static void main(String[] args) {
+		String source = "sadbutsad";
+		String target = "sad";
+		System.out.println(findIndexOccurecnces( source, target));
+
+	}
+	
+	public static int findIndexOccurecnces(String source,String target) {
+		if(source.length() < target.length()) return 0;
+		
+		for(int i=0 ; i <= source.length()- target.length() ; i++) {
+			int j =0;
+			
+			while(j < target.length() && source.charAt(i+j) == target.charAt(j)) {
+				j++;
+			}
+			
+			if(j==target.length()) {
+				return  i;
+			}
+		}
+		
+		return -1;
+	}
+
+}

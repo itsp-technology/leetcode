@@ -1,0 +1,24 @@
+package day06;
+
+public class RemoveElements {
+
+	public static void main(String[] args) {
+		int[] remove = {0,1,2,2,3,0,4,2};
+		int val = 2;
+		//5
+		System.out.println(removeElements(remove, val));
+
+	}
+	
+	public static int removeElements(int[] nums, int val) {
+		int count =0;
+		//iteratet the array
+		for(int i=0; i<nums.length; i++) {
+			if(nums[i] !=val) {
+				count++;
+			}
+		}
+		return 0;
+	}
+
+}

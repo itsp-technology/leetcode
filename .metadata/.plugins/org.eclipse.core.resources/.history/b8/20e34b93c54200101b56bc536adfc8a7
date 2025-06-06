@@ -1,0 +1,23 @@
+package day06;
+
+public class RemoveDuplicatFromSortedArray {
+
+	public static void main(String[] args) {
+		int[] sortedArray = {0,0,1,1,1,2,2,3,3,4};
+		System.out.println(countUniquEle(sortedArray));
+
+	}
+	
+	public static int countUniquEle(int[] sa) {
+		int k =0;
+		for(int i=0; i<sa.length-1; i++) {
+			for(int j=1; j<sa.length-1; j++) {
+				if(sa[i]==sa[j]) {
+					k++;
+				}
+			}
+		}
+		return k;
+	}
+
+}

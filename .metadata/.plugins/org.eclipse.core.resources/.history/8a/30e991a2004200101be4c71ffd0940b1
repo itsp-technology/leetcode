@@ -1,0 +1,25 @@
+package day05;
+
+import java.util.Stack;
+
+public class MatchBreckets {
+
+	public static void main(String[] args) {
+		
+		}
+
+	public static boolean matchBreact(String s) {
+		Stack<Character> stack = new Stack<Character>();
+	
+		for(char c : s.toCharArray()) {
+			if(c == '(' || c=='{' || c=='[') {
+				stack.push(c);
+			}else{
+				if(stack.isEmpty() || c == ')' && stack.pop() != '(' ) {
+					return false;
+				}
+			}
+			return stack.isEmpty();
+	}
+
+}
